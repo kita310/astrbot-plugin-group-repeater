@@ -1,0 +1,44 @@
+{
+  "enable": {
+    "type": "bool",
+    "default": true,
+    "description": "启用群聊复读",
+    "hint": "同一个群里两个人连续发送一模一样的内容时，机器人跟着复读一次；同一条内容只会跟一次"
+  },
+  "cooldown_seconds": {
+    "type": "int",
+    "default": 20,
+    "description": "同一群的复读冷却秒数",
+    "hint": "两次复读的最小间隔，防止复读上瘾刷屏；设为 0 表示不限制"
+  },
+  "max_length": {
+    "type": "int",
+    "default": 500,
+    "description": "参与复读的文本长度上限（字符数）",
+    "hint": "超过这个字数就不复读；默认 500，避免超长文本被拦截"
+  },
+  "repeat_images": {
+    "type": "bool",
+    "default": false,
+    "description": "允许复读图片与表情包",
+    "hint": "默认关闭：只复读文字和 QQ 内置表情。开启后含图片的消息整条参与复读（QQ 同一张图每次发送的地址可能不同，命中不稳定）"
+  },
+  "allow_groups": {
+    "type": "string",
+    "default": "",
+    "description": "只在这些群生效（群号，逗号分隔）",
+    "hint": "留空表示所有群都生效"
+  },
+  "deny_groups": {
+    "type": "string",
+    "default": "",
+    "description": "这些群不生效（群号，逗号分隔）",
+    "hint": "优先级高于 allow_groups"
+  },
+  "repeat_threshold": {
+    "type": "int",
+    "default": 2,
+    "description": "需要几个不同的人才触发复读",
+    "hint": "默认 2 人：两个不同的人连续发相同内容就复读。改成 3 就需要三个人"
+  }
+}

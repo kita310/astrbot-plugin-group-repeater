@@ -1,0 +1,8 @@
+name: astrbot_plugin_group_repeater
+display_name: 群聊复读机
+desc: 连续 N 个不同人发相同内容时跟一次；复读后本次复读事件结束；不限时间间隔，只要内容连续就计数。
+short_desc: 两人连续发相同内容时机器人跟一次，同一条内容只跟一次。
+version: 1.3.0
+author: kita
+repo: ""
+astrbot_version: ">=4.0.0"
